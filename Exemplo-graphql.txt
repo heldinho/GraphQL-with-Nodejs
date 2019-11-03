@@ -1,0 +1,32 @@
+GraphQL
+query: Pra toda vez tiver buscando informação
+mutation: Pra Criar, Alterar e Deletar uma informação
+subscription: Toda vez que for obter uma informação em tempo real
+
+{
+  query todosUsuarios {
+    users()
+  }
+
+  query todosPedidos {
+    orders()
+  }
+}
+
+{
+  mutation updateUser { // nome dentro do frontend
+    updateUser(id: 1) { // nome dentro do backend
+      nome: "Helder"
+    }
+    query users {
+      users({ per_page: 20, page: 2, filter: { nome: { "starts_with": "Helder" } } }) {
+        id
+        nome
+        groups {
+          id
+          title
+        }
+      }
+    }
+  }
+}
