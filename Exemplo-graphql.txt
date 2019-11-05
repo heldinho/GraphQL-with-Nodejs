@@ -1,7 +1,7 @@
 GraphQL
-query: Pra toda vez tiver buscando informação
-mutation: Pra Criar, Alterar e Deletar uma informação
-subscription: Toda vez que for obter uma informação em tempo real
+query: quando for fazer busca de informação
+mutation: Criar, Alterar e Deletar uma informação
+subscription: obter uma informação em tempo real
 
 {
   query todosUsuarios {
